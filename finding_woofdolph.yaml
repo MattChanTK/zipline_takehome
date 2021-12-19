@@ -1,0 +1,8 @@
+# Rooms config files to be loaded in this game
+rooms:
+  living_room: finding_woofdolph/living_room.yaml
+  kitchen: finding_woofdolph/kitchen.yaml
+  main_bedroom: finding_woofdolph/main_bedroom.yaml
+
+# The initial room when the game starts
+init_room: main_bedroom

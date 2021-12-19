@@ -1,0 +1,23 @@
+states:
+  - id: start
+    output: "You just woke up and still lying in bed. Not sure how long you have been sleeping"
+    actions: 
+      "go back to sleep": start
+      "get up": look_around
+  - id: look_around
+    output: "Your room is quite messy. Also the house awfully quiet..."
+    actions:
+      "go back to sleep": start
+      "call woofdolph": calling_woofdolph
+    leave_room_allowed: True
+  - id: calling_woofdolph
+    output: "....silent. Where is your dog Woofdolph?"
+    actions:
+      "call woofdolph": calling_woofdolph
+    leave_room_allowed: True
+
+leave_room:
+  "go to kitchen": [kitchen, look_around]
+  "go to living room": [living room, start]
+
+

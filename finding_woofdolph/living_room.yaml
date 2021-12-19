@@ -1,0 +1,22 @@
+states:
+  - id: start
+    output: "You are in the living room and see that the kitchen is awefully messy."
+    actions: 
+      "look around": look_around
+  - id: look_around
+    output: "You see that the front door is open!"
+    actions:
+      "look around": look_around
+      "call woofdolph": calling_woofdolph
+    leave_room_allowed: True
+  - id: calling_woofdolph
+    output: "....silent. Where is your dog Woofdolph?"
+    actions:
+      "look around": look_around
+      "call woofdolph": calling_woofdolph
+    leave_room_allowed: True
+
+leave_room:
+  "go to bedroom": [main_bedroom, look_around]
+  "go to kitchen": [kitchen, start]
+  "go out of the house": [front_lawn, start]
