@@ -1,7 +1,7 @@
 states:
   init:
     output: "You are the kitchen and see that it is awfully messy."
-    actions: 
+    actions:
       "look around": look_around
   look_around:
     output: "You see that there is a half eaten piece of steak on the floor and the fridge is open."
@@ -12,7 +12,7 @@ states:
     output: "....silence. Where is your dog Woofdolph?"
     actions:
       "call Woofdolph": calling_woofdolph
-    leave_room_allowed: True 
+    leave_room_allowed: True
 
 leave_room:
   "go to bedroom":

@@ -1,7 +1,7 @@
 states:
   init:
     output: "The grue sounds are louder."
-    actions: 
+    actions:
       "inspect room": inspecting_room
     leave_room_allowed: True
   inspecting_room:
@@ -16,9 +16,9 @@ states:
     leave_room_allowed: True
 
 leave_room:
-  "go south": 
+  "go south":
     room: init_room
     state: init
-  "go east": 
+  "go east":
     room: grue_room
     state: init

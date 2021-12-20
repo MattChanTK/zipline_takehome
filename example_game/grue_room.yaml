@@ -1,7 +1,7 @@
 states:
   init:
     output: "You are standing in a room with a grue."
-    actions: 
+    actions:
       "use sword": slay_grue
     leave_room_allowed: True
   slay_grue:
@@ -10,6 +10,6 @@ states:
       "exit game": FIN
 
 leave_room:
-  "run away": 
+  "run away":
     room: north_room
     state: escaping

@@ -1,10 +1,10 @@
 states:
   init:
     output: "You are at the front lawn. The lawn in covered in snow"
-    actions: 
+    actions:
       "look around": look_around
     leave_room_allowed: True
-  look_around: 
+  look_around:
     output: "You see a trail of paw prints on snow."
     actions:
       "call Woofdolph": calling_woofdolph
@@ -20,7 +20,7 @@ states:
       "walk back to the front lawn": init
   stand_in_the_back:
     output: "You see Woofdolph eating the steak at the back of the house!"
-    actions: 
+    actions:
       "walk back to front lawn": init
       "call Woofdolph": woofdolph_come
   woofdolph_come:

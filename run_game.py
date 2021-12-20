@@ -12,7 +12,7 @@ def load_configs(game_config_path: str) -> Tuple[str, str]:
     for room_name, room_config_path in game_config["rooms"].items():
         with open(room_config_path, "r") as room_config_stream:
             room_configs[room_name] = yaml.safe_load(room_config_stream)
-    
+
     return game_config, room_configs
 
 def run_game(room_configs: Dict, init_room: str, init_state: str, exit_game_state: str="FIN") -> None:
@@ -24,6 +24,7 @@ def run_game(room_configs: Dict, init_room: str, init_state: str, exit_game_stat
         room_config = room_configs[current_room]
         room_current_state_config = room_config["states"][current_state]
         output_text = room_current_state_config["output"]
+
         action_choices = room_current_state_config["actions"]
         action_text = list(action_choices.keys())
 
@@ -56,7 +57,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     game_config, room_configs = load_configs(args.game_config_path)
-    
+
     init_room = game_config["init_room"]
     init_state = game_config["init_state"]
     run_game(room_configs, init_room, init_state)

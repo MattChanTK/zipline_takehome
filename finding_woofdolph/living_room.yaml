@@ -1,7 +1,7 @@
 states:
   init:
     output: "You are in the living room and see that the living room is very messy."
-    actions: 
+    actions:
       "look around": look_around
   look_around:
     output: "You see that the front door is open!"
@@ -23,6 +23,6 @@ leave_room:
   "go to kitchen":
     room: kitchen
     state: init
-  "go out of the house": 
+  "go out of the house":
     room: front_lawn
     state: init

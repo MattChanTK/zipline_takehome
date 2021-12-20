@@ -1,7 +1,7 @@
 states:
   init:
     output: "You just woke up and still lying in bed. Not sure how long you have been sleeping"
-    actions: 
+    actions:
       "go back to sleep": init
       "get up": look_around
   look_around:
@@ -17,7 +17,7 @@ states:
     leave_room_allowed: True
 
 leave_room:
-  "go to kitchen": 
+  "go to kitchen":
     room: kitchen
     state: look_around
   "go to living room":
