@@ -1,0 +1,11 @@
+states:
+  init:
+    output: "It is pitch black. You hear a grue rumbling in the distance."
+    actions: 
+      "stay": init
+    leave_room_allowed: True
+
+leave_room:
+  "go north": 
+    room: north_room
+    state: init

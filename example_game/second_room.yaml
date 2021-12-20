@@ -1,0 +1,24 @@
+states:
+  init:
+    output: "The grue sounds are louder."
+    actions: 
+      "inspect room": inspecting_room
+    leave_room_allowed: True
+  inspecting_room:
+    output: "Someone has scrawled on one wall, 'DANGER TO THE EAST."
+    actions:
+      "Do nothing": init
+    leave_room_allowed: True
+  escaping:
+    output: "You can still hear the grue, but it is not chasing you."
+    actions:
+      "Do nothing": escaping
+    leave_room_allowed: True
+
+leave_room:
+  "go south": 
+    room: init_room
+    state: init
+  "go east": 
+    room: grue_room
+    state: init

@@ -17,7 +17,7 @@ states:
     output: "The sound of something moving is getting louder"
     actions:
       "follow paw prints": stand_in_the_back
-      "walk back to front the lawn": init
+      "walk back to the front lawn": init
   stand_in_the_back:
     output: "You see Woofdolph eating the steak at the back of the house!"
     actions: 

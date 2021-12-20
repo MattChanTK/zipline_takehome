@@ -1,0 +1,9 @@
+# Rooms config files to be loaded in this game
+rooms:
+  init_room: example_game/init_room.yaml
+  north_room: example_game/second_room.yaml
+  grue_room: example_game/grue_room.yaml
+
+# The initial room when the game starts
+init_room: init_room
+init_state: init

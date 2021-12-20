@@ -1,6 +1,6 @@
 states:
   init:
-    output: "You are in the living room and see that the kitchen is very messy."
+    output: "You are in the living room and see that the living room is very messy."
     actions: 
       "look around": look_around
   look_around:
