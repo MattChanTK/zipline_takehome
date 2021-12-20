@@ -1,34 +1,34 @@
 states:
-  - id: start
+  init:
     output: "You are at the front lawn. The lawn in covered in snow"
     actions: 
       "look around": look_around
     leave_room_allowed: True
-  - id: look_around: 
+  look_around: 
     output: "You see a trail of paw prints on snow."
     actions:
-      "walk back to front lawn": start
-      "call woofdolph": calling_woofdolph
-  - id: calling_woofdolph
+      "call Woofdolph": calling_woofdolph
+  calling_woofdolph:
     output: "Rustle sounds. Something is moving in the back of house."
     actions:
-      "walk back to front lawn": start
-      "call woofdolph": calling_woofdolph
+      "call Woofdolph": calling_woofdolph
       "follow paw prints": follow_print
-  - id: follow_print
+  follow_print:
     output: "The sound of something moving is getting louder"
     actions:
       "follow paw prints": stand_in_the_back
-      "walk back to front lawn": start
-  - id: stand_in_the_back
+      "walk back to front the lawn": init
+  stand_in_the_back:
     output: "You see Woofdolph eating the steak at the back of the house!"
     actions: 
-      "walk back to front lawn": start
-      "call woofdolph": woofdolph_come
-  - id: woofdolph_come
+      "walk back to front lawn": init
+      "call Woofdolph": woofdolph_come
+  woofdolph_come:
     output: "You have found Woofdolph! She is happy to see you!"
     actions:
       "end game": FIN
 
 leave_room:
-  "go in the house": [living room, start]
+  "go in the house":
+    room: living_room
+    state: init

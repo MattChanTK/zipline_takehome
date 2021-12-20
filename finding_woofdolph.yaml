@@ -3,6 +3,8 @@ rooms:
   living_room: finding_woofdolph/living_room.yaml
   kitchen: finding_woofdolph/kitchen.yaml
   main_bedroom: finding_woofdolph/main_bedroom.yaml
+  front_lawn: finding_woofdolph/front_lawn.yaml
 
 # The initial room when the game starts
 init_room: main_bedroom
+init_state: init
